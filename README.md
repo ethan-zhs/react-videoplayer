@@ -1,14 +1,13 @@
-# Tmedia Video Player
+# React Video Player
 
-Tmedia Video Player 是一个跨平台的视频播放器，解决多端视频播放器功能样式统一问题。
+React Video Player 是一个跨平台的视频播放器，解决多端视频播放器功能样式统一问题。
 1. 支持PC端和移动端样式
-2. 同时支持 `React Vue` 组件，也支持原生js引入使用(待开发)
-3. 支持视频源`mp4, hls, flv`
+2. 支持视频源`mp4, hls, flv`
 
 ## Install
 
 ```bash
-npm install @tmedia/tmv --registry http://192.168.31.66:4873
+npm install react-videoplayer
 ```
 
 ## Usage
@@ -17,23 +16,10 @@ npm install @tmedia/tmv --registry http://192.168.31.66:4873
 
 ```javascript
 // React Component
-import Tmvr from '@tmedia/tmv/dist/tmvr.js'
-import '@tmedia/tmv/dist/tmvr.css'
+import Tmvr from 'react-videoplayer'
+import 'react-videoplayer/dist/index.css'
 
 <Tmvr
-    poster="poster url"
-    url="video url"
-/>
-```
-
-### Vue Component
-
-```javascript
-// Vue Component
-import Tmvv from '@tmedia/tmv/dist/tmvv.js'
-import '@tmedia/tmv/dist/tmvv.css'
-
-<Tmvv
     poster="poster url"
     url="video url"
 />
@@ -42,11 +28,11 @@ import '@tmedia/tmv/dist/tmvv.css'
 ### Webpack config
 
 ```javascript
-// webpack 配置打包 @tmedia/tmv css 文件
+// webpack 配置打包 react-videoplayer css 文件
 {
     test: /\.css$/,
     use: ['style-loader', 'css-loader'],
-    include: [path.join(__dirname, 'node_modules/@tmedia/tmv/dist')]
+    include: [path.join(__dirname, 'node_modules/react-videoplayer/dist')]
 }
 ```
 
